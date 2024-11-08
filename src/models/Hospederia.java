@@ -1,15 +1,16 @@
 package models;
 
-public abstract class Hospederia {
+public abstract class Hospederia extends MedioDeAlojamiento {
     int capacidad;
     String tipoDeTemporada;
     int cantidadNoches;
     boolean esFumador;
 
-    public Hospederia(int capacidad, String tipoDeTemporada, int cantidadNoches, boolean esFumador) {
+    public Hospederia(int valorBaseNohe, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches, int capacidad, String tipoDeTemporada1, int cantidadNoches1, boolean esFumador) {
+        super(valorBaseNohe, datosClientes, tipoDeTemporada, cantidadNoches);
         this.capacidad = capacidad;
-        this.tipoDeTemporada = tipoDeTemporada;
-        this.cantidadNoches = cantidadNoches;
+        this.tipoDeTemporada = tipoDeTemporada1;
+        this.cantidadNoches = cantidadNoches1;
         this.esFumador = esFumador;
     }
 

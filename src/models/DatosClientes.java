@@ -1,6 +1,6 @@
 package models;
 
-public abstract class DatosClientes {
+public class DatosClientes {
     protected String name;
     protected int rut;
 
@@ -23,5 +23,9 @@ public abstract class DatosClientes {
 
     public void setRut(int rut) {
         this.rut = rut;
+    }
+
+    public String Datos(){
+        return getName()+getRut();
     }
 }
