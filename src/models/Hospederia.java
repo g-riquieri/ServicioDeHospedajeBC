@@ -2,8 +2,6 @@ package models;
 
 public abstract class Hospederia extends MedioDeAlojamiento {
     int capacidad;
-    String tipoDeTemporada;
-    int cantidadNoches;
     boolean esFumador;
 
     public Hospederia(int valorBaseNoche, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches, int capacidad, boolean esFumador) {
