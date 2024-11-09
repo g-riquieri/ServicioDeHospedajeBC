@@ -14,6 +14,6 @@ public class App {
         System.out.println(mda.getDatosClientes());
         System.out.println(mda.getTipoDeTemporada());
 
-        System.out.println("El sub total es: "+mda.subtotal());
+        System.out.println("El sub total a pagar es: "+mda.subtotal());
     }
 }
