@@ -56,7 +56,7 @@ public abstract class MedioDeAlojamiento {
     public double bonoDescuento() {
         double subtotal = subtotal();
         if (tipoDeTemporada.equalsIgnoreCase("baja")) {
-            return subtotal * 25/100;
+            return subtotal * 0.25;
         } else if (tipoDeTemporada.equalsIgnoreCase("media")) {
             return subtotal * 12.5/100;
         } else {
