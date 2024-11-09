@@ -4,7 +4,7 @@ public class DatosClientes {
     protected String name;
     protected int rut;
 
-    public DatosClientes(String name, int rut) {
+    public DatosClientes(String name, String rut) {
         this.name = name;
         this.rut = rut; //dni
     }

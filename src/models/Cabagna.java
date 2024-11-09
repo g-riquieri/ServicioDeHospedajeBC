@@ -20,14 +20,32 @@ public class Cabagna extends MedioDeAlojamiento {
         this.chimenea = chimenea;
     }
 
+    public boolean isEsFumador() {
+        return esFumador;
+    }
+
+    public void setEsFumador(boolean esFumador) {
+        this.esFumador = esFumador;
+    }
+
+    public int getCantPersonas() {
+        return cantPersonas;
+    }
+
+    public void setCantPersonas(int cantPersonas) {
+        this.cantPersonas = cantPersonas;
+    }
+
     @Override
     public double adicional() {
         return 0;
     }
 
+    // Función para aplicar el incremento del valor base
     public void incrementaValorBase() {
         if (cantPersonas > 5) {
             valorBaseNoche *= 1.18;
         }
+
     }
 }

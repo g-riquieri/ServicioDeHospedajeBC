@@ -1,23 +1,23 @@
 package models;
 
 public abstract class MedioDeAlojamiento {
-    protected int valorBaseNoche;
+    protected double valorBaseNoche;
     protected DatosClientes datosClientes;
     protected String tipoDeTemporada;
     protected int cantidadNoches;
 
-    public MedioDeAlojamiento(int valorBaseNoche, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches) {
+    public MedioDeAlojamiento(double valorBaseNoche, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches) {
         this.valorBaseNoche = valorBaseNoche;
         this.datosClientes = datosClientes;
         this.tipoDeTemporada = tipoDeTemporada;
         this.cantidadNoches = cantidadNoches;
     }
 
-    public int getValorBaseNoche() {
+    public double getValorBaseNoche() {
         return valorBaseNoche;
     }
 
-    public void setValorBaseNohe(int valorBaseNoche) {
+    public void setValorBaseNohe(double valorBaseNoche) {
         this.valorBaseNoche = valorBaseNoche;
     }
 
@@ -45,8 +45,8 @@ public abstract class MedioDeAlojamiento {
         this.cantidadNoches = cantidadNoches;
     }
 
-    public int subtotal(){
-        int subtotal = this.getCantidadNoches() * this.getValorBaseNoche() ;
+    public double subtotal(){
+        double subtotal = this.getCantidadNoches() * this.getValorBaseNoche() ;
 
         return subtotal;
     }

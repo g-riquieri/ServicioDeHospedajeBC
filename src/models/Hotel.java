@@ -4,7 +4,7 @@ public class Hotel extends Hospederia {
     boolean conDesayuno;
     protected int cantPersonas;
 
-    public Hotel(int valorBaseNoche, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches, int capacidad, boolean esFumador, boolean conDesayuno, int cantPersonas) {
+    public Hotel(double valorBaseNoche, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches, int capacidad, boolean esFumador, boolean conDesayuno, int cantPersonas) {
         super(valorBaseNoche, datosClientes, tipoDeTemporada, cantidadNoches, capacidad, esFumador);
         this.conDesayuno = conDesayuno;
         this.cantPersonas = cantPersonas;
