@@ -6,7 +6,7 @@ public class DatosClientes {
 
     public DatosClientes(String name, int rut) {
         this.name = name;
-        this.rut = rut;
+        this.rut = rut; //dni
     }
 
     public String getName() {

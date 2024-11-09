@@ -2,10 +2,12 @@ package models;
 
 public class Hotel extends Hospederia {
     boolean conDesayuno;
+    protected int cantPersonas;
 
-    public Hotel(int valorBaseNoche, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches, int capacidad, boolean esFumador, boolean conDesayuno) {
+    public Hotel(int valorBaseNoche, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches, int capacidad, boolean esFumador, boolean conDesayuno, int cantPersonas) {
         super(valorBaseNoche, datosClientes, tipoDeTemporada, cantidadNoches, capacidad, esFumador);
         this.conDesayuno = conDesayuno;
+        this.cantPersonas = cantPersonas;
     }
 
     public boolean getConDesayuno() {
@@ -18,6 +20,7 @@ public class Hotel extends Hospederia {
 
     //devolverá el valor adicional, que corresponde al 30% del subtotal si es Fumador y con desayuno.
 
+    @Override
     public double adicional() {
         esFumador = getEsFumador();
         conDesayuno = getConDesayuno();

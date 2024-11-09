@@ -7,15 +7,11 @@ import models.MedioDeAlojamiento;
 public class App {
     public static void main(String[] args) {
         DatosClientes data = new DatosClientes("Carlos", 12345);
-        MedioDeAlojamiento mda = new MedioDeAlojamiento(65000,data,"Alta",3);
-        Hotel hotel = new Hotel(65000,data,"Alta",3,5,true,false);
+        Hotel hotel = new Hotel(56000,data,"media",6,5,true,true,8);
 
-        System.out.println(mda.getCantidadNoches());
-        System.out.println(mda.getValorBaseNoche());
-        System.out.println(mda.getDatosClientes());
-        System.out.println(mda.getTipoDeTemporada());
 
-        System.out.println("El sub total a es: "+mda.subtotal());
         System.out.println(hotel.adicional());
+        System.out.println(hotel.bonoDescuento());
+        System.out.println(hotel.valorACancelar());
     }
 }

@@ -15,4 +15,9 @@ public class Carpa extends MedioDeAlojamiento {
     public void setCantidadPersonas(int cantidadPersonas) {
         this.cantidadPersonas = cantidadPersonas;
     }
+
+    @Override
+    public double adicional() {
+        return 0; // Carpa no tiene adicionales especificados
+    }
 }

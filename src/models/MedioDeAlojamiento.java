@@ -1,6 +1,6 @@
 package models;
 
-public class MedioDeAlojamiento {
+public abstract class MedioDeAlojamiento {
     protected int valorBaseNoche;
     protected DatosClientes datosClientes;
     protected String tipoDeTemporada;
@@ -50,4 +50,24 @@ public class MedioDeAlojamiento {
 
         return subtotal;
     }
+
+    public abstract double adicional();
+
+    public double bonoDescuento() {
+        double subtotal = subtotal();
+        if (tipoDeTemporada.equalsIgnoreCase("baja")) {
+            return subtotal * 25/100;
+        } else if (tipoDeTemporada.equalsIgnoreCase("media")) {
+            return subtotal * 12.5/100;
+        } else {
+            return 0;
+        }
+    }
+
+
+    public double valorACancelar() {
+        return subtotal() - bonoDescuento() + adicional();
+    }
+
+
 }
