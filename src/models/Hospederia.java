@@ -6,11 +6,9 @@ public abstract class Hospederia extends MedioDeAlojamiento {
     int cantidadNoches;
     boolean esFumador;
 
-    public Hospederia(int valorBaseNohe, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches, int capacidad, String tipoDeTemporada1, int cantidadNoches1, boolean esFumador) {
-        super(valorBaseNohe, datosClientes, tipoDeTemporada, cantidadNoches);
+    public Hospederia(int valorBaseNoche, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches, int capacidad, boolean esFumador) {
+        super(valorBaseNoche, datosClientes, tipoDeTemporada, cantidadNoches);
         this.capacidad = capacidad;
-        this.tipoDeTemporada = tipoDeTemporada1;
-        this.cantidadNoches = cantidadNoches1;
         this.esFumador = esFumador;
     }
 
@@ -38,11 +36,13 @@ public abstract class Hospederia extends MedioDeAlojamiento {
         this.cantidadNoches = cantidadNoches;
     }
 
-    public boolean isEsFumador() {
+    public boolean getEsFumador() {
         return esFumador;
     }
 
     public void setEsFumador(boolean esFumador) {
         this.esFumador = esFumador;
     }
+
+
 }

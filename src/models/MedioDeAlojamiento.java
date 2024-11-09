@@ -6,19 +6,19 @@ public class MedioDeAlojamiento {
     protected String tipoDeTemporada;
     protected int cantidadNoches;
 
-    public MedioDeAlojamiento(int valorBaseNohe, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches) {
-        this.valorBaseNoche = valorBaseNohe;
+    public MedioDeAlojamiento(int valorBaseNoche, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches) {
+        this.valorBaseNoche = valorBaseNoche;
         this.datosClientes = datosClientes;
         this.tipoDeTemporada = tipoDeTemporada;
         this.cantidadNoches = cantidadNoches;
     }
 
-    public int getValorBaseNohe() {
+    public int getValorBaseNoche() {
         return valorBaseNoche;
     }
 
-    public void setValorBaseNohe(int valorBaseNohe) {
-        this.valorBaseNoche = valorBaseNohe;
+    public void setValorBaseNohe(int valorBaseNoche) {
+        this.valorBaseNoche = valorBaseNoche;
     }
 
     public DatosClientes getDatosClientes() {
@@ -46,7 +46,7 @@ public class MedioDeAlojamiento {
     }
 
     public int subtotal(){
-        int subtotal = this.getCantidadNoches() * this.getValorBaseNohe() ;
+        int subtotal = this.getCantidadNoches() * this.getValorBaseNoche() ;
 
         return subtotal;
     }
