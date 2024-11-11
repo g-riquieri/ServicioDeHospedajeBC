@@ -36,6 +36,12 @@ public class Cabagna extends MedioDeAlojamiento {
         this.cantPersonas = cantPersonas;
     }
 
+    public void setValorBaseNoche(double valorBaseNoche) {
+        this.valorBaseNoche = valorBaseNoche;
+    }
+
+    //Funciones===========================================================
+
     @Override
     public double adicional() {
         return 0;

@@ -1,12 +1,12 @@
 package models;
 
-public class DatosClientes {
+public abstract class DatosClientes {
     protected String name;
     protected int rut;
 
-    public DatosClientes(String name, String rut) {
+    public DatosClientes(String name, int rut) {
         this.name = name;
-        this.rut = rut; //dni
+        this.rut = rut;
     }
 
     public String getName() {
@@ -23,9 +23,5 @@ public class DatosClientes {
 
     public void setRut(int rut) {
         this.rut = rut;
-    }
-
-    public String Datos(){
-        return getName()+getRut();
     }
 }

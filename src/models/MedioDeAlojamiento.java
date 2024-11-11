@@ -45,6 +45,8 @@ public abstract class MedioDeAlojamiento {
         this.cantidadNoches = cantidadNoches;
     }
 
+    //Funciones=================================================
+
     public double subtotal(){
         double subtotal = this.getCantidadNoches() * this.getValorBaseNoche() ;
 
