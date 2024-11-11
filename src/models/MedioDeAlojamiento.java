@@ -1,24 +1,24 @@
 package models;
 
-public class MedioDeAlojamiento {
-    protected int valorBaseNohe;
+public abstract class MedioDeAlojamiento {
+    protected double valorBaseNoche;
     protected DatosClientes datosClientes;
     protected String tipoDeTemporada;
     protected int cantidadNoches;
 
-    public MedioDeAlojamiento(int valorBaseNohe, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches) {
-        this.valorBaseNohe = valorBaseNohe;
+    public MedioDeAlojamiento(double valorBaseNoche, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches) {
+        this.valorBaseNoche = valorBaseNoche;
         this.datosClientes = datosClientes;
         this.tipoDeTemporada = tipoDeTemporada;
         this.cantidadNoches = cantidadNoches;
     }
 
-    public int getValorBaseNohe() {
-        return valorBaseNohe;
+    public double getValorBaseNoche() {
+        return valorBaseNoche;
     }
 
-    public void setValorBaseNohe(int valorBaseNohe) {
-        this.valorBaseNohe = valorBaseNohe;
+    public void setValorBaseNohe(double valorBaseNoche) {
+        this.valorBaseNoche = valorBaseNoche;
     }
 
     public DatosClientes getDatosClientes() {
@@ -44,4 +44,30 @@ public class MedioDeAlojamiento {
     public void setCantidadNoches(int cantidadNoches) {
         this.cantidadNoches = cantidadNoches;
     }
+
+    public double subtotal(){
+        double subtotal = this.getCantidadNoches() * this.getValorBaseNoche() ;
+
+        return subtotal;
+    }
+
+    public abstract double adicional();
+
+    public double bonoDescuento() {
+        double subtotal = subtotal();
+        if (tipoDeTemporada.equalsIgnoreCase("baja")) {
+            return subtotal * 0.25;
+        } else if (tipoDeTemporada.equalsIgnoreCase("media")) {
+            return subtotal * 12.5/100;
+        } else {
+            return 0;
+        }
+    }
+
+
+    public double valorACancelar() {
+        return subtotal() - bonoDescuento() + adicional();
+    }
+
+
 }

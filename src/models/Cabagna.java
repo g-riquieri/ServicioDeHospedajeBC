@@ -1,10 +1,14 @@
 package models;
 
-public class Cabagna extends Hospederia {
+public class Cabagna extends MedioDeAlojamiento {
+    protected boolean esFumador;
+    protected int cantPersonas;
     boolean chimenea;
 
-    public Cabagna(int valorBaseNohe, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches, int capacidad, String tipoDeTemporada1, int cantidadNoches1, boolean esFumador, boolean chimenea) {
-        super(valorBaseNohe, datosClientes, tipoDeTemporada, cantidadNoches, capacidad, tipoDeTemporada1, cantidadNoches1, esFumador);
+    public Cabagna(int valorBaseNoche, DatosClientes datosClientes, String tipoDeTemporada, int cantidadNoches, boolean esFumador, int cantPersonas, boolean chimenea) {
+        super(valorBaseNoche, datosClientes, tipoDeTemporada, cantidadNoches);
+        this.esFumador = esFumador;
+        this.cantPersonas = cantPersonas;
         this.chimenea = chimenea;
     }
 
@@ -14,5 +18,34 @@ public class Cabagna extends Hospederia {
 
     public void setChimenea(boolean chimenea) {
         this.chimenea = chimenea;
+    }
+
+    public boolean isEsFumador() {
+        return esFumador;
+    }
+
+    public void setEsFumador(boolean esFumador) {
+        this.esFumador = esFumador;
+    }
+
+    public int getCantPersonas() {
+        return cantPersonas;
+    }
+
+    public void setCantPersonas(int cantPersonas) {
+        this.cantPersonas = cantPersonas;
+    }
+
+    @Override
+    public double adicional() {
+        return 0;
+    }
+
+    // Función para aplicar el incremento del valor base
+    public void incrementaValorBase() {
+        if (cantPersonas > 5) {
+            valorBaseNoche *= 1.18;
+        }
+
     }
 }
