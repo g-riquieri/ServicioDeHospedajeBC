@@ -1,6 +1,7 @@
 package view;
 
 import controllers.Controller;
+import models.Carpa;
 import models.DatosClientes;
 import models.Hotel;
 import models.Cabagna;

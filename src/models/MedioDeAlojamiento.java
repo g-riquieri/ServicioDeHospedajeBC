@@ -66,6 +66,15 @@ public abstract class MedioDeAlojamiento {
         }
     }
 
+    @Override
+    public String toString() {
+        return "MedioDeAlojamiento" +
+                "Valor Base por Noche= " + valorBaseNoche +
+                ", Datos del Cliente=" + datosClientes +
+                ", Temporada='" + tipoDeTemporada + '\'' +
+                ", Cantidad de Noches=" + cantidadNoches +
+                '.';
+    }
 
     public double valorACancelar() {
         return subtotal() - bonoDescuento() + adicional();
