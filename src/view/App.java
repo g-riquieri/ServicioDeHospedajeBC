@@ -87,6 +87,7 @@ public class App {
 
                         System.out.print("Ingrese el tipo de temporada (alta, media, baja): ");
                         String tipoDeTemporada = scanner.nextLine();
+                        scanner.nextLine();
 
                         System.out.print("Ingrese la cantidad de noches: ");
                         int cantidadNoches = scanner.nextInt();
@@ -112,20 +113,34 @@ public class App {
                         System.out.println("Tipo de alojamiento no válido.");
                     }
                     break;
-                case 2: controlador.mostrarAlojamientos(); break;
-                case 3: System.out.print("Ingrese el RUT del cliente: ");
-                    String rutCliente = scanner.nextLine();
-                    controlador.mostrarAlojamientoCliente(rutCliente);
+                case 2:
+                        controlador.mostrarAlojamientos();
                     break;
-                case 4: controlador.calcularTotalAdicional(); break;
-                case 5: controlador.calcularTotalBonoDescuento(); break;
-                case 6: System.out.print("Ingrese el RUT del cliente para calcular el valor a cancelar: ");
-                    String rutValor = scanner.nextLine();
-                    controlador.calcularValorACancelarCliente(rutValor);
+                case 3:
+                        System.out.print("Ingrese el RUT del cliente: ");
+                        String rutCliente = scanner.nextLine();
+                        controlador.mostrarAlojamientoCliente(rutCliente);
                     break;
-                case 7: controlador.aplicarIncrementoValorBase(); break;
-                case 8: salir = true; System.out.println("Saliendo..."); break;
-                default: System.out.println("Opción no válida. Intente de nuevo.");
+                case 4:
+                        controlador.calcularTotalAdicional();
+                    break;
+                case 5:
+                    controlador.calcularTotalBonoDescuento();
+                    break;
+                case 6:
+                        System.out.print("Ingrese el RUT del cliente para calcular el valor a cancelar: ");
+                        String rutValor = scanner.nextLine();
+                        controlador.calcularValorACancelarCliente(rutValor);
+                    break;
+                case 7:
+                        controlador.aplicarIncrementoValorBase();
+                    break;
+                case 8:
+                        salir = true;
+                        System.out.println("Saliendo...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intente de nuevo.");
             }
         }
     }

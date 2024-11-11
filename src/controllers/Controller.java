@@ -82,6 +82,7 @@ public class Controller {
                     double nuevoValorBase = cabagna.getValorBaseNoche() * 1.18;
                     cabagna.setValorBaseNoche(nuevoValorBase);
                     System.out.println("Incremento aplicado a la cabaña del cliente " + cabagna.getDatosClientes().getName());
+                    System.out.println("El total es: " + nuevoValorBase);
                 }
             }
         }
