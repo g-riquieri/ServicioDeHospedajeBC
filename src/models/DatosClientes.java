@@ -1,6 +1,6 @@
 package models;
 
-public abstract class DatosClientes {
+public class DatosClientes {
     protected String name;
     protected int rut;
 

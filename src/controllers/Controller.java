@@ -39,7 +39,7 @@ public class Controller {
         int rutInt = Integer.parseInt(rut); // Cambiamos el nombre a rutInt
         for (MedioDeAlojamiento alojamiento : alojamientos) {
             if (alojamiento.getDatosClientes().getRut() == rutInt) {
-                System.out.println("Cliente encontrado: " + alojamiento.getDatosClientes());
+                System.out.println("Cliente encontrado: " + alojamiento.getDatosClientes().getName());
                 System.out.println("Datos del alojamiento: " + alojamiento.toString());
                 return;
             }

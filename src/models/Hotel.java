@@ -1,6 +1,6 @@
 package models;
 
-public class Hotel {
+public class Hotel extends Hospederia{
     boolean conDesayuno;
     protected int cantPersonas;
 
