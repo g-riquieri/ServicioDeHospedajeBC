@@ -70,9 +70,9 @@ public abstract class MedioDeAlojamiento {
     public String toString() {
         return "MedioDeAlojamiento" +
                 "Valor Base por Noche= " + valorBaseNoche + "\n"+
-                ", Datos del Cliente=" + datosClientes + "\n"+
-                ", Temporada='" + tipoDeTemporada + '\'' + "\n"+
-                ", Cantidad de Noches=" + cantidadNoches + "\n"+
+                "Datos del Cliente=" + datosClientes.getName() + " " +datosClientes.getRut()+ "\n"+
+                "Temporada='" + getTipoDeTemporada() + '\'' + "\n"+
+                "Cantidad de Noches=" + cantidadNoches + "\n"+
                 '.';
     }
 
