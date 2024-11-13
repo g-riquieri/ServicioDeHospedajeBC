@@ -80,7 +80,7 @@ public class App {
                         scanner.nextLine();
 
                         // Crear el objeto `Hotel` con los 8 parámetros requeridos
-                        Hotel hotel = new Hotel(valorBaseNoche, datosCliente,tipoTemporada, cantidadNoches,capacidad,esFumador,conDesayuno,cantPersonas);
+                        Hotel hotel = new Hotel(valorBaseNoche, datosCliente, tipoTemporada,cantidadNoches,capacidad,esFumador, conDesayuno,cantPersonas);
                         controlador.agregarAlojamiento(hotel);
                     } else if (tipoAlojamiento.equalsIgnoreCase("Cabaña")) {
                         System.out.print("Ingrese la capacidad de la cabaña: ");
