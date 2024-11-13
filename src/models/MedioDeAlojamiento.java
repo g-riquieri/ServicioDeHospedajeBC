@@ -69,10 +69,10 @@ public abstract class MedioDeAlojamiento {
     @Override
     public String toString() {
         return "MedioDeAlojamiento" +
-                "Valor Base por Noche= " + valorBaseNoche +
-                ", Datos del Cliente=" + datosClientes +
-                ", Temporada='" + tipoDeTemporada + '\'' +
-                ", Cantidad de Noches=" + cantidadNoches +
+                "Valor Base por Noche= " + valorBaseNoche + "\n"+
+                ", Datos del Cliente=" + datosClientes + "\n"+
+                ", Temporada='" + tipoDeTemporada + '\'' + "\n"+
+                ", Cantidad de Noches=" + cantidadNoches + "\n"+
                 '.';
     }
 

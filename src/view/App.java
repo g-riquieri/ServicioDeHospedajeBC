@@ -88,6 +88,7 @@ public class App {
 
                         System.out.print("Ingrese el tipo de temporada (alta, media, baja): ");
                         String tipoDeTemporada = scanner.nextLine();
+                        scanner.nextLine();
 
                         System.out.print("Ingrese la cantidad de noches: ");
                         int cantidadNoches = scanner.nextInt();
