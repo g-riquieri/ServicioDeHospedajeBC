@@ -66,6 +66,15 @@ public abstract class MedioDeAlojamiento {
         }
     }
 
+    @Override
+    public String toString() {
+        return "MedioDeAlojamiento" +
+                "Valor Base por Noche= " + valorBaseNoche + "\n"+
+                "Datos del Cliente=" + datosClientes.getName() + " " +datosClientes.getRut()+ "\n"+
+                "Temporada='" + getTipoDeTemporada() + '\'' + "\n"+
+                "Cantidad de Noches=" + cantidadNoches + "\n"+
+                '.';
+    }
 
     public double valorACancelar() {
         return subtotal() - bonoDescuento() + adicional();
